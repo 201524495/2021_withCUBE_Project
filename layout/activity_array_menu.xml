@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".arrayMenu"
+    android:background="@drawable/bg">
+
+<!--    <ImageView-->
+<!--        android:id="@+id/im_logo"-->
+<!--        android:layout_width="257dp"-->
+<!--        android:layout_height="166dp"-->
+<!--        android:layout_marginStart="-10dp"-->
+<!--        android:layout_marginTop="-10dp"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:srcCompat="@mipmap/with_cube_logo01" />-->
+
+    <Button
+        android:id="@+id/btn_numbering"
+        android:layout_width="210dp"
+        android:layout_height="104dp"
+        android:layout_marginStart="149dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="150dp"
+        android:text="숫자학습"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:fontFamily="@font/font"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.551"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/bg_custom_box_03"/>
+
+    <Button
+        android:id="@+id/btn_comparison"
+        android:layout_width="210dp"
+        android:layout_height="102dp"
+        android:layout_marginStart="149dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="150dp"
+        android:text="대소비교"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:fontFamily="@font/font"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_numbering"
+        android:background="@drawable/bg_custom_box_04"/>
+
+    <Button
+        android:id="@+id/btn_calculations"
+        android:layout_width="222dp"
+        android:layout_height="104dp"
+        android:layout_marginStart="149dp"
+        android:layout_marginTop="64dp"
+        android:layout_marginEnd="150dp"
+        android:text="사칙연산"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        android:fontFamily="@font/font"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_comparison"
+        android:background="@drawable/bg_custom_box_06"/>
+
+    <ImageButton
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="149dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="150dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_calculations"
+        android:background="@mipmap/back_button_foreground"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

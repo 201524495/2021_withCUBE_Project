@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".arrayComparisonPopUp"
+    android:background="@drawable/bg">
+
+<!--    <ImageView-->
+<!--        android:id="@+id/im_logo"-->
+<!--        android:layout_width="257dp"-->
+<!--        android:layout_height="166dp"-->
+<!--        android:layout_marginStart="-10dp"-->
+<!--        android:layout_marginTop="-10dp"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:srcCompat="@mipmap/with_cube_logo01" />-->
+
+    <ImageView
+        android:id="@+id/im_pop_larger"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="56dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="176dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ic_launcher" />
+
+    <ImageView
+        android:id="@+id/im_pop_smaller"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="59dp"
+        android:layout_marginTop="71dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/im_pop_larger"
+        app:srcCompat="@mipmap/ic_launcher" />
+
+    <ImageView
+        android:id="@+id/im_pop_equal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="59dp"
+        android:layout_marginTop="86dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/im_pop_smaller"
+        app:srcCompat="@mipmap/ic_launcher_round" />
+
+    <ImageButton
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="145dp"
+        android:layout_marginEnd="154dp"
+        android:layout_marginBottom="63dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@mipmap/back_button_foreground"/>
+
+    <TextView
+        android:id="@+id/tv_pop_larger"
+        android:layout_width="149dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="176dp"
+        android:fontFamily="@font/font"
+        android:textStyle="bold"
+        android:text="왼쪽 값이 오른쪽 값보다 큼"
+        app:layout_constraintStart_toEndOf="@+id/im_pop_larger"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_pop_smaller"
+        android:layout_width="157dp"
+        android:layout_height="82dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="52dp"
+        android:fontFamily="@font/font"
+        android:textStyle="bold"
+        android:text="왼쪽 값이 오른쪽 값보다 작음"
+        app:layout_constraintStart_toEndOf="@+id/im_pop_smaller"
+        app:layout_constraintTop_toBottomOf="@+id/tv_pop_larger" />
+
+    <TextView
+        android:id="@+id/tv_pop_equal"
+        android:layout_width="172dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="68dp"
+        android:fontFamily="@font/font"
+        android:textStyle="bold"
+        android:text="왼쪽 값과 오른쪽 값의 크기가 같음"
+        app:layout_constraintStart_toEndOf="@+id/im_pop_equal"
+        app:layout_constraintTop_toBottomOf="@+id/tv_pop_smaller" />
+</androidx.constraintlayout.widget.ConstraintLayout>

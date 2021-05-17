@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".arrayCalculationExam"
+    android:background="@drawable/bg">
+
+<!--    <ImageView-->
+<!--        android:id="@+id/im_logo"-->
+<!--        android:layout_width="257dp"-->
+<!--        android:layout_height="166dp"-->
+<!--        android:layout_marginStart="-10dp"-->
+<!--        android:layout_marginTop="-10dp"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"-->
+<!--        app:srcCompat="@mipmap/with_cude_logo01_round" />-->
+
+    <TextView
+        android:id="@+id/tv_instruction"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_marginTop="85dp"
+        android:background="@drawable/bg_custom_box_00"
+        android:gravity="center"
+        android:text="Q. 올바른 답이 포함된 위드큐브를 세워보아요!  \n식을 완성한 후 뒷면을 보면 그림이 나온답니다!"
+        android:fontFamily="@font/font"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/im_cal_block" />
+
+    <Button
+        android:id="@+id/btn_hint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="130dp"
+        android:layout_marginEnd="40dp"
+        android:text="설명 보기"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btn_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="57dp"
+        android:layout_marginBottom="52dp"
+        android:background="@mipmap/back_button_foreground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btn_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="57dp"
+        android:layout_marginBottom="52dp"
+        android:background="@mipmap/next_button_01_foreground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/im_cal_block"
+        android:layout_width="322dp"
+        android:layout_height="244dp"
+        android:layout_marginTop="205dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/ic_launcher_round" />
+
+    <ImageButton
+        android:id="@+id/imbtn_answer1"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="234dp"
+        android:layout_marginEnd="55dp"
+        android:scaleType="centerInside"
+        android:src="@android:drawable/ic_menu_help"
+        android:text="Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imbtn_answer2"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="297dp"
+        android:layout_marginEnd="55dp"
+        android:scaleType="centerInside"
+        android:src="@android:drawable/ic_menu_help"
+        android:text="Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imbtn_answer3"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="360dp"
+        android:layout_marginEnd="55dp"
+        android:scaleType="centerInside"
+        android:src="@android:drawable/ic_menu_help"
+        android:text="Button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
