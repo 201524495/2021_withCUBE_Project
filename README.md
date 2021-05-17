@@ -20,3 +20,9 @@ Custom Dialog
 # 3. EditText Focus Down
 
     dfd
+
+# 4. EditText KeyBoard (Input Type)
+
+    dfd
+    
+    
