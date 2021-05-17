@@ -4,9 +4,12 @@
 
 # 1. Switch Dialog
 
+Aleter Dialog
+
     dfd
 
 ...
+Custom Dialog
 
     dfd
 
