@@ -17,6 +17,6 @@ Custom Dialog
 
     dfd
 
-# 3. EditText Focus
+# 3. EditText Focus Down
 
     dfd
