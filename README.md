@@ -4,11 +4,11 @@
 
 # 1. Switch Dialog
 
-Aleter Dialog
+Alert Dialog
 
     dfd
 
-...
+
 Custom Dialog
 
     dfd
