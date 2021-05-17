@@ -17,6 +17,6 @@ Custom Dialog
 
     dfd
 
-# 3. 
+# 3. EditText Focus
 
     dfd
