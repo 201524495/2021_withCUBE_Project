@@ -72,7 +72,16 @@ Custom Dialog
     
 # 5. Text Blink
 
-    dfd
+    private void blinkText() {
+        TextView myText = (TextView) findViewById(R.id.tv_animation );
+
+        Animation anim = new AlphaAnimation(0.0f, 1.0f);
+        anim.setDuration(500); //You can manage the time of the blink with this parameter
+        anim.setStartOffset(200);
+        anim.setRepeatMode(Animation.REVERSE);
+        anim.setRepeatCount(Animation.INFINITE);
+        myText.startAnimation(anim);
+    }
 
 # 6. Sound option
 
