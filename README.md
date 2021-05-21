@@ -53,7 +53,10 @@ Alert Dialog
 
 Custom Dialog
 
-    dfd
+    mEndDialog = new EndDialog(mainMenu.this);
+    mEndDialog.setCancelable(false); // 외부 화면 클릭해도 창이 닫히지 않는다.
+    mEndDialog.show();    
+    
 
 # 2. Video Full Screen
 
