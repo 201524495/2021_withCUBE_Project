@@ -57,6 +57,62 @@ Custom Dialog
     mEndDialog.setCancelable(false); // 외부 화면 클릭해도 창이 닫히지 않는다.
     mEndDialog.show();    
     
+        @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.custom_dialog);
+
+        sound_cancel =  findViewById(R.id.sound_cancel);
+        sound_ok = findViewById(R.id.sound_ok);
+        sw_bgm = findViewById(R.id.sw_bgm);
+        sw_click = findViewById(R.id.sw_click);
+
+        sw_bgm.setTextOff("OFF");
+        sw_bgm.setTextOn("ON");
+        sw_click.setTextOff("OFF");
+        sw_click.setTextOn("ON");
+        sw_bgm.setChecked(checkedItems[0]); //
+        sw_click.setChecked(checkedItems[1]); //
+
+        sound_cancel.setOnClickListener(this);
+        sound_ok.setOnClickListener(this);
+        sw_bgm.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                checkedItems[0] = isChecked;
+            }
+        });
+        sw_click.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                checkedItems[1] = isChecked;
+            }
+        });
+        Log.d("OK","bgm : "+bgmONOFF + " click : "+clickONOFF);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()) {
+            case R.id.sound_cancel: // 취소
+                checkedItems[0] = bgmONOFF;
+                checkedItems[1] = clickONOFF;
+                Log.d("OK","bgm : "+bgmONOFF + " click : "+clickONOFF);
+                cancel();
+                break;
+
+            case R.id.sound_ok: // 확인
+                bgmONOFF = checkedItems[0];
+                clickONOFF = checkedItems[1];
+                sw_bgm.setChecked(bgmONOFF);
+                sw_click.setChecked(clickONOFF);
+                BackgroundSound(checkedItems[0]);
+                ClickSound(checkedItems[1]);
+                Log.d("OK","bgm : "+bgmONOFF + " click : "+clickONOFF);
+                dismiss();
+                break;
+        }
+    }
 
 # 2. Video Full Screen
 
