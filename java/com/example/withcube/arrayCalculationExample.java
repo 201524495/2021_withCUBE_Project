@@ -8,6 +8,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -15,7 +16,7 @@ public class arrayCalculationExample extends AppCompatActivity {
 
     TextView tv_instruction;
     EditText et_ans1, et_ans2, et_ans3;
-    Button btn_next;
+    ImageButton btn_next, btn_back;
     Button btn_hint;
     private int i = 0; // 정답확인 및 화면 이동 flag
 
@@ -80,8 +81,13 @@ public class arrayCalculationExample extends AppCompatActivity {
             }
         });
 
-
-
+        btn_back = findViewById(R.id.btn_back);
+        btn_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
 
         // 문제 설명 팝업 띄우기
         btn_hint = findViewById(R.id.btn_hint);
