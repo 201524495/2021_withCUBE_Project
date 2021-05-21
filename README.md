@@ -32,7 +32,7 @@ Custom Dialog
 
     dfd
 
-# 7. 
+# 7. Splash Activity
 
     dfd
 
