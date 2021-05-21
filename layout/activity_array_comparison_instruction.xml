@@ -39,6 +39,13 @@
         android:background="@color/yellow"
         android:textColor="@color/black"/>
 
+    <TextView
+        android:id="@+id/tv_animation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="60dp"
+        android:text="화면을 클릭하면 다음 화면으로 넘어갑니다." />
 
 
 </LinearLayout>

@@ -22,7 +22,6 @@
         android:text="&lt;규칙&gt;"
         android:textSize="50dp"
         android:fontFamily="@font/font"
-        android:background="@color/yellow"
         android:textStyle="bold"
         android:textColor="@color/black"/>
 
@@ -31,7 +30,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:background="@color/yellow"
         android:text="1. 블록을 쌓으면서 문제를 해결합니다.
                         \n2. 덧셈과 뺄셈이 기억이 나지 않을 경우 상단의 \'설명보기\'를 클릭하면 됩니다.
                         \n3. 먼저 블록을 쌓습니다.
@@ -40,5 +38,13 @@
         android:textColor="@color/black"
         android:textSize="30dp"
         android:fontFamily="@font/font"/>
+
+    <TextView
+        android:id="@+id/tv_animation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="60dp"
+        android:text="화면을 클릭하면 다음 화면으로 넘어갑니다." />
 
 </LinearLayout>
