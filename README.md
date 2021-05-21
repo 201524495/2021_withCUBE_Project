@@ -63,12 +63,55 @@ Custom Dialog
     dfd
 
 # 3. EditText Focus Down
-
-    dfd
-
 # 4. EditText KeyBoard (Input Type)
 
-    dfd
+     <EditText
+        android:id="@+id/et_answer1"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="250dp"
+        android:background="@drawable/edittext_rounded_corner_rectangle"
+        android:gravity="center"
+        android:hint="\?"
+        android:fontFamily="@font/font"
+        android:inputType="number" // KeyBoard Type
+        android:maxLength="1"
+        android:nextFocusDown="@id/et_answer2" // next Focus
+        app:layout_constraintStart_toEndOf="@+id/tv_question1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/et_answer2"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/edittext_rounded_corner_rectangle"
+        android:gravity="center"
+        android:hint="\?"
+        android:fontFamily="@font/font"
+        android:inputType="number" // KeyBoard Type
+        android:maxLength="1"
+        android:nextFocusDown="@id/et_answer3" // next Focus
+        app:layout_constraintStart_toEndOf="@+id/tv_question2"
+        app:layout_constraintTop_toBottomOf="@+id/et_answer1" />
+
+    <EditText
+        android:id="@+id/et_answer3"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginTop="36dp"
+        android:background="@drawable/edittext_rounded_corner_rectangle"
+        android:gravity="center"
+        android:hint="\?"
+        android:fontFamily="@font/font"
+        android:imeOptions="actionDone"
+        android:inputType="number" // KeyBoard Type
+        android:maxLength="1"
+        app:layout_constraintStart_toEndOf="@+id/tv_question3"
+        app:layout_constraintTop_toBottomOf="@+id/et_answer2" />
     
 # 5. Text Blink
 
