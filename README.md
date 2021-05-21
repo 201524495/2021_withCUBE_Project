@@ -8,7 +8,6 @@ Alert Dialog
 
     dfd
 
-
 Custom Dialog
 
     dfd
@@ -25,4 +24,19 @@ Custom Dialog
 
     dfd
     
-    
+# 5. Text Blink
+
+    dfd
+
+# 6. Sound option
+
+    dfd
+
+# 7. 
+
+    dfd
+
+# 8. 
+
+    dfd
+
