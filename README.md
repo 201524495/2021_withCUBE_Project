@@ -128,8 +128,32 @@ Custom Dialog
 
 # 6. Sound option
 
-    dfd
-
+    public static MediaPlayer mediaPlayer;
+    mediaPlayer = MediaPlayer.create(mainMenu.this, R.raw.b_06); // 음악 샘플 추가
+    mediaPlayer.start(); // 일단 시작
+    public void BackgroundSound(boolean bgmONOFF) {
+        if(!bgmONOFF) { // 켜져 있으면 끈다.
+            mediaPlayer.pause(); // 중지 == bgmONOFF == true
+            Log.e("bgm","bgm off " + bgmONOFF);
+        }
+        else { // 꺼져있으면 켠다.
+            mediaPlayer.setLooping(true);
+            mediaPlayer.start(); // 시작 == bgmONOFF == flase
+            Log.e("bgm","bgm on" + bgmONOFF);
+        }
+    }
+    //
+    public void ClickSound(boolean clickONOFF) {
+        AudioManager amanager=(AudioManager)this.getContext().getSystemService(Context.AUDIO_SERVICE);
+        if(!clickONOFF) {
+            amanager.setStreamMute(AudioManager.STREAM_SYSTEM, true);
+            Log.e("click","click off " + clickONOFF);
+        }
+        else {
+            amanager.setStreamMute(AudioManager.STREAM_SYSTEM, false);
+            Log.e("click","click on " + clickONOFF);
+        }
+    }
 # 7. Splash Activity
 
     dfd
