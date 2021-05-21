@@ -6,7 +6,50 @@
 
 Alert Dialog
 
-    dfd
+    // setup the alert builder
+    AlertDialog.Builder builder = new AlertDialog.Builder(mainMenu.this);
+    builder.setTitle("환경 설정");
+    // add a checkbox list
+    builder.setMultiChoiceItems(items, checkedItems, new DialogInterface.OnMultiChoiceClickListener() {
+        @Override
+        public void onClick(DialogInterface dialog, int which, boolean isChecked) {
+            // user checked or unchecked a box
+           if(which == 0) {
+               checkedItems[0] = isChecked;
+           }
+           if(which == 1) {
+               checkedItems[1] = isChecked;
+           }
+        }
+    });
+
+    // add OK buttons
+    builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+        @Override
+        public void onClick(DialogInterface dialog, int which) {
+            bgmONOFF = checkedItems[0];
+            clickONOFF = checkedItems[1];
+            Log.e("OK","bgm : "+bgmONOFF+" click : "+clickONOFF);
+            BackgroundSound(checkedItems[0]);
+            ClickSound(checkedItems[1]);
+
+        }
+    });
+    // add Cancel buttons
+    builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+        @Override
+        public void onClick(DialogInterface dialog, int which) {
+            checkedItems[0] = bgmONOFF;
+            checkedItems[1] = clickONOFF;
+            Log.e("Cancel","bgm : "+bgmONOFF+" click : "+clickONOFF);
+
+        }
+    });
+    
+    builder.setCancelable(false); // 외부 화면 클릭해도 창이 닫히지 않는다.
+    // create and show the alert dialog
+    AlertDialog dialog = builder.create();
+    dialog.show();
 
 Custom Dialog
 
