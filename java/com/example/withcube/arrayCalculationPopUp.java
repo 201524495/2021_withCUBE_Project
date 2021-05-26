@@ -23,11 +23,6 @@ public class arrayCalculationPopUp extends AppCompatActivity {
         tv_equal = findViewById(R.id.tv_cal_equal);
         tv_minus = findViewById(R.id.tv_cal_minus);
         tv_pluse = findViewById(R.id.tv_cal_pluse);
-
-        // 설명 추가
-//        tv_pluse.setText("왼쪽 값과 오른쪽 값을 더한다는 의미");
-//        tv_minus.setText("왼쪽 값에서 오른쪽 값을 뺀다는 의미");
-//        tv_equal.setText("왼쪽 값과 오른쪽 값이 같다는 의미");
         
         // 뒤로가기 == 메뉴로 이동 == 팝업 종료
         btn_back = findViewById(R.id.btn_back);
@@ -37,20 +32,5 @@ public class arrayCalculationPopUp extends AppCompatActivity {
                 finish();
             }
         });
-
     }
-//    @Override
-//    public boolean onTouchEvent(MotionEvent event) {
-//        // 바깥 레이어 클릭시 안닫히게
-//        if(event.getAction() == MotionEvent.ACTION_OUTSIDE) {
-//            return false;
-//        }
-//        return true;
-//    }
-//
-//    @Override
-//    public void onBackPressed() {
-//        // 안드로이드 백버튼 막기
-//        return;
-//    }
 }

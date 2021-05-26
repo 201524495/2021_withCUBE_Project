@@ -16,7 +16,8 @@ public class arrayCalculationExample extends AppCompatActivity {
 
     TextView tv_instruction;
     EditText et_ans1, et_ans2, et_ans3;
-    ImageButton btn_next, btn_back;
+    ImageButton btn_back;
+    Button btn_next;
     Button btn_hint;
     private int i = 0; // 정답확인 및 화면 이동 flag
 
@@ -66,13 +67,14 @@ public class arrayCalculationExample extends AppCompatActivity {
                         if( Integer.parseInt(et_ans3.getText().toString()) == 8 ) et_ans3.setBackgroundResource(R.drawable.box_green_edittext);
                         else et_ans3.setBackgroundResource(R.drawable.box_red_edittext); // 답이 틀리면
 
-//                        btn_next.setText("문제 풀러 가기");
+                        btn_next.setText("문제 풀러 가기");
                         tv_instruction.setText("정답은 X X X 입니다.");
                     }
                 }
 
                 else if(i > 1) { // 한번 더 클릭 시 "문제 풀러가기" 버튼 활성화
                     Log.e("CalculationEx","Move Cal Exam Activity ");
+                   // btn_next.setText("문제 풀러 가기");
                     Intent intent = new Intent(getApplicationContext(), arrayCalculationInstruction.class);
                     startActivity(intent);
                     finish();

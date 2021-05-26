@@ -12,8 +12,8 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 
 public class arrayCalculationResult extends AppCompatActivity {
-//    public static Activity arraycalculatorresult;
-    ImageButton btn_back, btn_next;
+    ImageButton btn_back;
+    Button btn_next;
     ImageView im_result_real, im_result_block;
     public static final int calculationBlock[] = {R.drawable.block_boat, R.drawable.block_camel, R.drawable.block_castle, R.drawable.block_diamond, R.drawable.block_dog, R.drawable.block_duck,
             R.drawable.block_fish, R.drawable.block_flower, R.drawable.block_house, R.drawable.block_mouse, R.drawable.block_ribbon}; // 연산할 사진

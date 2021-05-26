@@ -1,24 +1,16 @@
 package com.example.withcube;
 // 메인 매뉴
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
-import android.os.Build;
 import android.os.Bundle;
-import android.provider.MediaStore;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.Switch;
-import android.widget.Toast;
 
-import static com.example.withcube.EndDialog.bgmONOFF;
+import static com.example.withcube.soundActivity.bgmONOFF;
 
 public class mainMenu extends AppCompatActivity {
 
@@ -26,7 +18,7 @@ public class mainMenu extends AppCompatActivity {
     ImageButton btn_sound;
     public static MediaPlayer mediaPlayer;
 
-    private EndDialog mEndDialog;
+    private soundActivity mSoundActivity;
 
     String[] items = {"배경 음악", "버튼 소리"};
 
@@ -48,9 +40,9 @@ public class mainMenu extends AppCompatActivity {
             public void onClick(View v) {
                 // setup the alert builder
 //                AlertDialog.Builder builder = new AlertDialog.Builder(mainMenu.this);
-               mEndDialog = new EndDialog(mainMenu.this);
-               mEndDialog.setCancelable(false); // 외부 화면 클릭해도 창이 닫히지 않는다.
-               mEndDialog.show();
+               mSoundActivity = new soundActivity(mainMenu.this);
+               mSoundActivity.setCancelable(false); // 외부 화면 클릭해도 창이 닫히지 않는다.
+               mSoundActivity.show();
 //                builder.setTitle("환경 설정");
 ////                 add a checkbox list
 //                builder.setMultiChoiceItems(items, checkedItems, new DialogInterface.OnMultiChoiceClickListener() {

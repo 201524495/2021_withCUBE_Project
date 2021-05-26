@@ -13,7 +13,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class arrayComparisonExample extends AppCompatActivity {
-    ImageButton btn_larger, btn_equal, btn_smaller;
+    Button btn_larger, btn_equal, btn_smaller;
     Button btn_hint;
     ImageButton btn_back;
     TextView tv_instruction;
@@ -24,7 +24,6 @@ public class arrayComparisonExample extends AppCompatActivity {
         setContentView(R.layout.activity_array_comparison_example);
 
         tv_instruction = findViewById(R.id.tv_example_instruction);
-//        tv_instruction.setText("왼쪽에는 N개, 오른쪽에는 M개가 있습니다.\n 따라서 오른쪽이 더 큽니다.\n 정답은 \"KK\"입니다.");
 
         btn_equal = findViewById(R.id.btn_example_equal);
         btn_larger = findViewById(R.id.btn_example_larger);

@@ -10,12 +10,13 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Random;
 
 public class arrayComparisonExam extends AppCompatActivity {
 
-    ImageButton btn_larger, btn_equal, btn_smaller;
+    Button btn_larger, btn_equal, btn_smaller;
     Button btn_hint;
     ImageButton btn_back;
     TextView tv_instruction, tv_correct;
@@ -33,9 +34,6 @@ public class arrayComparisonExam extends AppCompatActivity {
         setContentView(R.layout.activity_array_comparison_exam);
         Log.e("Compareex","Compare Exam Activity");
 
-
-//        arrayComparisonInstruction arraycomparisoninstruction = (arrayComparisonInstruction)arrayComparisonInstruction.arraycomparisoninstruction;
-//        arraycomparisoninstruction.finish(); // instruction activity 종료
         //
         im_val1 = findViewById(R.id.im_exam_val1); // 첫 번째 이미지
         im_val2 = findViewById(R.id.im_exam_val2); // 두 번째 이미지
@@ -51,10 +49,7 @@ public class arrayComparisonExam extends AppCompatActivity {
 
 
         makeRand(); // 난수 val1, val2 생성
-        //    if(correct == 1 && correctTimes<6) {
-//            correct = 0;
-//            while(correctTimes<6) { // 5번 반복
-                Log.e("Compareex", "val1 : " + val1 + " val2 : " + val2);
+        Log.e("Compareex", "val1 : " + val1 + " val2 : " + val2);
         randImage(); // val1, val2에 해당하는 그림 생성
         tv_instruction.setText("val1 : "+val1+" val2 : "+val2);
 
@@ -64,6 +59,8 @@ public class arrayComparisonExam extends AppCompatActivity {
                         if (val1 > val2) {
                             Log.e("Compareex", "Click Larger Button");
                             RandomLogic();
+                        } else {
+                            Toast.makeText(getApplicationContext(), "wrong answer", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
@@ -74,6 +71,8 @@ public class arrayComparisonExam extends AppCompatActivity {
                         if(val1 == val2) {
                             Log.e("Compareex", "Click Equal Button");
                             RandomLogic();
+                        } else {
+                            Toast.makeText(getApplicationContext(), "wrong answer", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
@@ -84,6 +83,8 @@ public class arrayComparisonExam extends AppCompatActivity {
                         if(val1 < val2) {
                             Log.e("Compareex", "Click Larger Button");
                             RandomLogic();
+                        } else {
+                            Toast.makeText(getApplicationContext(), "wrong answer", Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
@@ -101,6 +102,9 @@ public class arrayComparisonExam extends AppCompatActivity {
 
         // 뒤로가기 == 메뉴 이동 == 액티비티 종료
         btn_back = findViewById(R.id.btn_back);
+        btn_back.setImageResource(R.drawable.btn_back);
+        btn_back.setScaleType(ImageView.ScaleType.FIT_CENTER);
+        btn_back.setAdjustViewBounds(true);
         btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -141,6 +145,8 @@ public class arrayComparisonExam extends AppCompatActivity {
             btn_smaller.setVisibility(View.INVISIBLE);
             im_val1.setImageResource(R.drawable.withrobot_orange_01);
             im_val2.setImageResource(R.drawable.withrobot_red_01);
+            btn_back.setImageResource(R.drawable.btn_end);
+
         }
     }
 }
