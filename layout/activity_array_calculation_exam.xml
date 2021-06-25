@@ -4,42 +4,47 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".arrayCalculationExam"
-    android:background="@drawable/bg">
+    tools:context="kr.co.vrec.withcube.arrayCalculationExam"
+    android:background="@drawable/background">
 
-<!--    <ImageView-->
-<!--        android:id="@+id/im_logo"-->
-<!--        android:layout_width="257dp"-->
-<!--        android:layout_height="166dp"-->
-<!--        android:layout_marginStart="-10dp"-->
-<!--        android:layout_marginTop="-10dp"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:srcCompat="@mipmap/with_cude_logo01_round" />-->
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="360dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="152dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bg_custom_box_09" />
 
     <TextView
         android:id="@+id/tv_instruction"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:layout_marginTop="85dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="172dp"
         android:background="@drawable/bg_custom_box_00"
-        android:gravity="center"
-        android:text="Q. 올바른 답이 포함된 위드큐브를 세워보아요!  \n식을 완성한 후 뒷면을 보면 그림이 나온답니다!"
         android:fontFamily="@font/font"
-        android:textSize="15dp"
+        android:gravity="center"
+        android:text="@string/cal_exam"
+        android:textSize="15sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/im_cal_block" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <Button
         android:id="@+id/btn_hint"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="130dp"
-        android:layout_marginEnd="40dp"
-        android:text="설명 보기"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/ic_information"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
@@ -66,7 +71,9 @@
         android:id="@+id/im_cal_block"
         android:layout_width="322dp"
         android:layout_height="244dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="205dp"
+        android:layout_marginEnd="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

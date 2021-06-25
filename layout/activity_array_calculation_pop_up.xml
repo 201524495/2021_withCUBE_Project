@@ -4,48 +4,66 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".arrayComparisonPopUp"
-    android:background="@drawable/bg">
-
-<!--    <ImageView-->
-<!--        android:id="@+id/im_logo"-->
-<!--        android:layout_width="257dp"-->
-<!--        android:layout_height="166dp"-->
-<!--        android:layout_marginStart="-10dp"-->
-<!--        android:layout_marginTop="-10dp"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:srcCompat="@mipmap/with_cube_logo01" />-->
+    tools:context="kr.co.vrec.withcube.arrayComparisonPopUp"
+    android:background="@drawable/background">
 
     <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="480dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.515"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/bg_custom_box_09" />
+
+    <Button
         android:id="@+id/im_cal_pluse"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
+        android:layout_marginStart="50dp"
         app:layout_constraintStart_toStartOf="parent"
-        android:layout_marginTop="176dp"
+        android:layout_marginTop="200dp"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/ic_launcher" />
+        android:background="@drawable/bg_custom_box_02"
+        android:text="+"
+        android:textSize="50sp"
+        android:gravity="center"
+        android:fontFamily="@font/font"
+        android:textColor="@color/white" />
 
-    <ImageView
+    <Button
         android:id="@+id/im_cal_minus"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="59dp"
-        android:layout_marginTop="71dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="85dp"
+        android:background="@drawable/bg_custom_box_02"
+        android:fontFamily="@font/font"
+        android:gravity="center"
+        android:text="-"
+        android:textColor="@color/white"
+        android:textSize="50sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/im_cal_pluse"
-        app:srcCompat="@mipmap/ic_launcher" />
+        app:layout_constraintTop_toBottomOf="@+id/im_cal_pluse" />
 
-    <ImageView
+    <Button
         android:id="@+id/im_cal_equal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="56dp"
-        android:layout_marginTop="76dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="85dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/im_cal_minus"
-        app:srcCompat="@mipmap/ic_launcher_round" />
+        android:background="@drawable/bg_custom_box_02"
+        android:text="="
+        android:textSize="50sp"
+        android:gravity="center"
+        android:fontFamily="@font/font"
+        android:textColor="@color/white" />
 
     <ImageButton
         android:id="@+id/btn_back"
@@ -60,38 +78,44 @@
         android:background="@mipmap/back_button_foreground"/>
 
     <TextView
-        android:id="@+id/tv_cal_equal"
-        android:layout_width="172dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="44dp"
-        android:layout_marginTop="81dp"
-        android:text="왼쪽 값과 오른쪽 값이 같다는 의미"
-        android:fontFamily="@font/font"
-        android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/im_cal_equal"
-        app:layout_constraintTop_toBottomOf="@+id/tv_cal_minus" />
-
-    <TextView
         android:id="@+id/tv_cal_pluse"
-        android:layout_width="153dp"
-        android:layout_height="75dp"
-        android:layout_marginStart="49dp"
-        android:layout_marginTop="176dp"
-        android:text="왼쪽 값과 오른쪽 값을 더한다는 의미"
+        android:layout_width="150dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="205dp"
+        android:text="왼쪽 값과 \n오른쪽 값을 \n더한다는 의미"
+        android:textSize="20sp"
         android:fontFamily="@font/font"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/im_cal_pluse"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/im_cal_pluse"/>
 
     <TextView
         android:id="@+id/tv_cal_minus"
-        android:layout_width="160dp"
-        android:layout_height="76dp"
-        android:layout_marginStart="38dp"
-        android:layout_marginTop="60dp"
-        android:text="왼쪽 값에서 오른쪽 값을 뺀다는 의미"
+        android:layout_width="150dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="75dp"
         android:fontFamily="@font/font"
+        android:text="왼쪽 값에서 \n오른쪽 값을 \n뺀다는 의미"
+        android:textSize="20sp"
         android:textStyle="bold"
-        app:layout_constraintStart_toEndOf="@+id/im_cal_minus"
-        app:layout_constraintTop_toBottomOf="@+id/tv_cal_pluse" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_cal_pluse"
+        app:layout_constraintStart_toEndOf="@+id/im_cal_minus"/>
+
+    <TextView
+        android:id="@+id/tv_cal_equal"
+        android:layout_width="150dp"
+        android:layout_height="80dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="70dp"
+        android:fontFamily="@font/font"
+        android:text="왼쪽 값과 \n오른쪽 값이 \n같다는 의미"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_cal_minus"
+        app:layout_constraintStart_toEndOf="@+id/im_cal_equal"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

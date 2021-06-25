@@ -4,18 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".arrayMenu"
-    android:background="@drawable/bg">
-
-<!--    <ImageView-->
-<!--        android:id="@+id/im_logo"-->
-<!--        android:layout_width="257dp"-->
-<!--        android:layout_height="166dp"-->
-<!--        android:layout_marginStart="-10dp"-->
-<!--        android:layout_marginTop="-10dp"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:srcCompat="@mipmap/with_cube_logo01" />-->
+    tools:context="kr.co.vrec.withcube.arrayMenu"
+    android:background="@drawable/background">
 
     <Button
         android:id="@+id/btn_numbering"
@@ -26,7 +16,7 @@
         android:layout_marginEnd="150dp"
         android:text="숫자학습"
         android:textColor="@color/white"
-        android:textSize="30dp"
+        android:textSize="30sp"
         android:textStyle="bold"
         android:fontFamily="@font/font"
         app:layout_constraintEnd_toEndOf="parent"
@@ -38,13 +28,13 @@
     <Button
         android:id="@+id/btn_comparison"
         android:layout_width="210dp"
-        android:layout_height="102dp"
+        android:layout_height="104dp"
         android:layout_marginStart="149dp"
         android:layout_marginTop="64dp"
         android:layout_marginEnd="150dp"
         android:text="대소비교"
         android:textColor="@color/white"
-        android:textSize="30dp"
+        android:textSize="30sp"
         android:textStyle="bold"
         android:fontFamily="@font/font"
         app:layout_constraintEnd_toEndOf="parent"
@@ -54,14 +44,14 @@
 
     <Button
         android:id="@+id/btn_calculations"
-        android:layout_width="222dp"
+        android:layout_width="210dp"
         android:layout_height="104dp"
         android:layout_marginStart="149dp"
         android:layout_marginTop="64dp"
         android:layout_marginEnd="150dp"
         android:text="사칙연산"
         android:textColor="@color/white"
-        android:textSize="30dp"
+        android:textSize="30sp"
         android:textStyle="bold"
         android:fontFamily="@font/font"
         app:layout_constraintEnd_toEndOf="parent"

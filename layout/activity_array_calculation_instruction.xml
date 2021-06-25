@@ -5,13 +5,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".arrayCalculationInstruction"
+    tools:context="kr.co.vrec.withcube.arrayCalculationInstruction"
     android:orientation="vertical"
     android:paddingLeft="16dp"
-    android:paddingTop="200dp"
+    android:paddingTop="130dp"
     android:paddingRight="16dp"
     android:paddingBottom="100dp"
-    android:background="@drawable/bg">
+    android:background="@drawable/background">
 
     <TextView
         android:id="@+id/btn_head"
@@ -20,31 +20,28 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:text="&lt;규칙&gt;"
-        android:textSize="50dp"
+        android:textSize="40sp"
         android:fontFamily="@font/font"
         android:textStyle="bold"
         android:textColor="@color/black"/>
 
-    <TextView
-        android:id="@+id/btn_body"
-        android:layout_width="match_parent"
+        <TextView
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:text=    "@string/cal_instruction"
+        android:id="@+id/btn_body"
         android:layout_gravity="center"
-        android:text="1. 블록을 쌓으면서 문제를 해결합니다.
-                        \n2. 덧셈과 뺄셈이 기억이 나지 않을 경우 상단의 \'설명보기\'를 클릭하면 됩니다.
-                        \n3. 먼저 블록을 쌓습니다.
-                        \n4. 다 쌓았으면 .
-                        "
+        android:gravity="center"
+        android:textSize="20sp"
+        android:fontFamily="@font/font"
         android:textColor="@color/black"
-        android:textSize="30dp"
-        android:fontFamily="@font/font"/>
-
+        android:paddingTop="20dp"/>
     <TextView
         android:id="@+id/tv_animation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:paddingTop="60dp"
+        android:paddingTop="80dp"
         android:text="화면을 클릭하면 다음 화면으로 넘어갑니다." />
 
 </LinearLayout>

@@ -4,37 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".arrayNumbering"
-    android:background="@drawable/bg">
-
-<!--    <ImageView-->
-<!--        android:id="@+id/im_logo"-->
-<!--        android:layout_width="257dp"-->
-<!--        android:layout_height="166dp"-->
-<!--        android:layout_marginStart="-10dp"-->
-<!--        android:layout_marginTop="-10dp"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:srcCompat="@mipmap/with_cube_logo01" />-->
+    tools:context="kr.co.vrec.withcube.arrayNumbering"
+    android:background="@drawable/background">
 
     <ImageView
         android:id="@+id/im_Number"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-<!--    <TextView-->
-<!--        android:id="@+id/tv_instruction"-->
-<!--        android:layout_width="244dp"-->
-<!--        android:layout_height="159dp"-->
-<!--        android:layout_marginStart="74dp"-->
-<!--        android:layout_marginTop="36dp"-->
-<!--        android:layout_marginEnd="75dp"-->
-<!--        android:hint="TextView"-->
-<!--        app:layout_constraintEnd_toEndOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toBottomOf="@+id/im_Number" />-->
 
     <ImageButton
         android:id="@+id/btn_next"
