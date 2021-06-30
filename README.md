@@ -42,3 +42,9 @@
 <https://github.com/201524495/2021_withCUBE_Projects/blob/main/src/main/res/layout/toast_layout.xml>
 
 <https://github.com/201524495/2021_withCUBE_Projects/blob/main/src/main/java/kr/co/vrec/withcube/arrayComparisonExample.java>
+
+# 9. Touch Event
+
+<https://github.com/201524495/2021_withCUBE_Projects/blob/bbbeb8211b1e2566f1548133b5e36b14070a263a/src/main/java/kr/co/vrec/withcube/arrayComparisonInstruction.java>
+
+#10. 
