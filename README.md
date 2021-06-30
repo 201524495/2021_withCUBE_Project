@@ -116,7 +116,7 @@ Custom Dialog
 
 # 2. Video Full Screen
 
-    dfd
+    <https://github.com/201524495/2021_withCUBE_Projects/blob/main/src/main/java/kr/co/vrec/withcube/videoActivity.java>
 
 # 3. EditText Focus Down
 # 4. EditText KeyBoard (Input Type)
@@ -171,6 +171,8 @@ Custom Dialog
     
 # 5. Text Blink
 
+<https://github.com/201524495/2021_withCUBE_Projects/blob/main/src/main/res/anim/blink.xml>
+
     private void blinkText() {
         TextView myText = (TextView) findViewById(R.id.tv_animation );
 
@@ -183,6 +185,8 @@ Custom Dialog
     }
 
 # 6. Sound option
+
+<https://github.com/201524495/2021_withCUBE_Projects/blob/main/src/main/java/kr/co/vrec/withcube/soundActivity.java>
 
     public static MediaPlayer mediaPlayer;
     mediaPlayer = MediaPlayer.create(mainMenu.this, R.raw.b_06); // 음악 샘플 추가
@@ -212,7 +216,7 @@ Custom Dialog
     }
 # 7. Splash Activity
 
-splash.java
+splash.java <https://github.com/201524495/2021_withCUBE_Projects/blob/main/src/main/java/kr/co/vrec/withcube/splashActivity.java>
 
     try{
              Thread.sleep(2000);
