@@ -3,11 +3,11 @@
 
 # 1. Switch Dialog
 
-**Alert Dialog
+**Alert Dialog**
 
 <https://github.com/201524495/2021_withCUBE_Projects/blob/main/src/main/java/kr/co/vrec/withcube/mainMenu.java>
 
-**Custom Dialog
+**Custom Dialog**
 
 <https://github.com/201524495/2021_withCUBE_Projects/blob/main/src/main/res/layout/custom_dialog.xml>
 
