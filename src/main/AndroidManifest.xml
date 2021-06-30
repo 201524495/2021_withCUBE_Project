@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="kr.co.vrec.withcube">
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/withcube_icon"
+        android:label="@string/app_name"
+        android:noHistory="true"
+        android:roundIcon="@drawable/withcube_icon"
+        android:screenOrientation="portrait"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.WithCUBE">
+
+        <!-- <activity android:name=".soundActivity" -->
+        <!-- android:screenOrientation="portrait" -->
+        <!-- android:theme="@android:style/Theme.Dialog"/> -->
+        <!-- 화면 전환 세로 고정   portrait -->
+        <activity
+            android:name="kr.co.vrec.withcube.splashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="kr.co.vrec.withcube.arrayCalculationResult"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="kr.co.vrec.withcube.arrayMenu"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="kr.co.vrec.withcube.arrayNumbering"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="kr.co.vrec.withcube.arrayComparisonPopUp"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="kr.co.vrec.withcube.arrayComparisonInstruction"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name="kr.co.vrec.withcube.arrayComparisonExam"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="kr.co.vrec.withcube.arrayComparisonExample"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="kr.co.vrec.withcube.arrayCalculationPopUp"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="kr.co.vrec.withcube.arrayCalculationInstruction"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="kr.co.vrec.withcube.arrayCalculationExam"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="kr.co.vrec.withcube.arrayCalculationExample"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="kr.co.vrec.withcube.buildingMenu"
+            android:screenOrientation="portrait" />
+
+        <activity android:name="kr.co.vrec.withcube.videoActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name="kr.co.vrec.withcube.mainMenu"
+            android:screenOrientation="portrait">
+
+            <!-- <intent-filter> -->
+            <!-- <action android:name="android.intent.action.MAIN" /> -->
+
+
+            <!-- <category android:name="android.intent.category.LAUNCHER" /> -->
+            <!-- </intent-filter> -->
+        </activity>
+    </application>
+
+</manifest>

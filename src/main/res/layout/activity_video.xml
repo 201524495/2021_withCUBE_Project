@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="kr.co.vrec.withcube.videoActivity"
+    android:background="@drawable/background">
+
+    <FrameLayout
+        android:id="@+id/videoview_frame"
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        android:layout_gravity="center">
+
+        <VideoView
+            android:id="@+id/main_videoview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <ImageButton
+            android:id="@+id/fullscreen_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="end|bottom"
+            android:layout_marginBottom="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_weight="1"
+            android:background="@null"/>
+
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/btn_back"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        android:layout_gravity="bottom|center"
+        android:layout_marginTop="100dp"
+        android:text="다른 동영상 보기"
+        android:textStyle="bold"
+        android:textColor="#2DA011"
+        android:textSize="20sp"
+        android:fontFamily="@font/font"
+        android:background="@drawable/bg_custom_box_05"/>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="204dp"
+        android:layout_height="141dp"
+        android:layout_margin="50dp"
+        app:srcCompat="@drawable/with_cube_logo_02"
+        android:layout_gravity="center"/>
+
+
+</LinearLayout>
