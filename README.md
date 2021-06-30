@@ -211,7 +211,9 @@ Custom Dialog
         }
     }
 # 7. Splash Activity
-    __splash.java__
+
+splash.java
+
     try{
              Thread.sleep(2000);
          }catch (InterruptedException e) {
@@ -221,7 +223,8 @@ Custom Dialog
          startActivity(intent);
          finish();
      
-     __AndroidManifest.xml__
+AndroidManifest.xml
+     
     <activity
         android:name="kr.co.vrec.withcube.splashActivity"
         android:screenOrientation="portrait"
