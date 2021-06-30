@@ -27,6 +27,8 @@
 
 <https://github.com/201524495/2021_withCUBE_Projects/blob/main/src/main/res/anim/blink.xml>
 
+<https://github.com/201524495/2021_withCUBE_Projects/blob/bbbeb8211b1e2566f1548133b5e36b14070a263a/src/main/java/kr/co/vrec/withcube/arrayCalculationInstruction.java>
+
 # 6. Sound option
 
 <https://github.com/201524495/2021_withCUBE_Projects/blob/main/src/main/java/kr/co/vrec/withcube/soundActivity.java>
@@ -47,4 +49,6 @@
 
 <https://github.com/201524495/2021_withCUBE_Projects/blob/bbbeb8211b1e2566f1548133b5e36b14070a263a/src/main/java/kr/co/vrec/withcube/arrayComparisonInstruction.java>
 
-#10. 
+#10. N X 2 image array
+
+<https://github.com/201524495/2021_withCUBE_Projects/blob/bbbeb8211b1e2566f1548133b5e36b14070a263a/src/main/res/layout/activity_building_menu.xml>
