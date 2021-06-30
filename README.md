@@ -1,244 +1,43 @@
 # 2021_withCUBE_Project
 
 
-
 # 1. Switch Dialog
 
 Alert Dialog
 
-    // setup the alert builder
-    AlertDialog.Builder builder = new AlertDialog.Builder(mainMenu.this);
-    builder.setTitle("환경 설정");
-    // add a checkbox list
-    builder.setMultiChoiceItems(items, checkedItems, new DialogInterface.OnMultiChoiceClickListener() {
-        @Override
-        public void onClick(DialogInterface dialog, int which, boolean isChecked) {
-            // user checked or unchecked a box
-           if(which == 0) {
-               checkedItems[0] = isChecked;
-           }
-           if(which == 1) {
-               checkedItems[1] = isChecked;
-           }
-        }
-    });
-
-    // add OK buttons
-    builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
-        @Override
-        public void onClick(DialogInterface dialog, int which) {
-            bgmONOFF = checkedItems[0];
-            clickONOFF = checkedItems[1];
-            Log.e("OK","bgm : "+bgmONOFF+" click : "+clickONOFF);
-            BackgroundSound(checkedItems[0]);
-            ClickSound(checkedItems[1]);
-
-        }
-    });
-    // add Cancel buttons
-    builder.setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
-        @Override
-        public void onClick(DialogInterface dialog, int which) {
-            checkedItems[0] = bgmONOFF;
-            checkedItems[1] = clickONOFF;
-            Log.e("Cancel","bgm : "+bgmONOFF+" click : "+clickONOFF);
-
-        }
-    });
-    
-    builder.setCancelable(false); // 외부 화면 클릭해도 창이 닫히지 않는다.
-    // create and show the alert dialog
-    AlertDialog dialog = builder.create();
-    dialog.show();
+<https://github.com/201524495/2021_withCUBE_Projects/blob/main/src/main/java/kr/co/vrec/withcube/mainMenu.java>
 
 Custom Dialog
 
-    mEndDialog = new EndDialog(mainMenu.this);
-    mEndDialog.setCancelable(false); // 외부 화면 클릭해도 창이 닫히지 않는다.
-    mEndDialog.show();    
-    
-        @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.custom_dialog);
-
-        sound_cancel =  findViewById(R.id.sound_cancel);
-        sound_ok = findViewById(R.id.sound_ok);
-        sw_bgm = findViewById(R.id.sw_bgm);
-        sw_click = findViewById(R.id.sw_click);
-
-        sw_bgm.setTextOff("OFF");
-        sw_bgm.setTextOn("ON");
-        sw_click.setTextOff("OFF");
-        sw_click.setTextOn("ON");
-        sw_bgm.setChecked(checkedItems[0]); //
-        sw_click.setChecked(checkedItems[1]); //
-
-        sound_cancel.setOnClickListener(this);
-        sound_ok.setOnClickListener(this);
-        sw_bgm.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                checkedItems[0] = isChecked;
-            }
-        });
-        sw_click.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                checkedItems[1] = isChecked;
-            }
-        });
-        Log.d("OK","bgm : "+bgmONOFF + " click : "+clickONOFF);
-    }
-
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.sound_cancel: // 취소
-                checkedItems[0] = bgmONOFF;
-                checkedItems[1] = clickONOFF;
-                Log.d("OK","bgm : "+bgmONOFF + " click : "+clickONOFF);
-                cancel();
-                break;
-
-            case R.id.sound_ok: // 확인
-                bgmONOFF = checkedItems[0];
-                clickONOFF = checkedItems[1];
-                sw_bgm.setChecked(bgmONOFF);
-                sw_click.setChecked(clickONOFF);
-                BackgroundSound(checkedItems[0]);
-                ClickSound(checkedItems[1]);
-                Log.d("OK","bgm : "+bgmONOFF + " click : "+clickONOFF);
-                dismiss();
-                break;
-        }
-    }
+<https://github.com/201524495/2021_withCUBE_Projects/blob/main/src/main/res/layout/custom_dialog.xml>
 
 # 2. Video Full Screen
 
-    <https://github.com/201524495/2021_withCUBE_Projects/blob/main/src/main/java/kr/co/vrec/withcube/videoActivity.java>
+<https://github.com/201524495/2021_withCUBE_Projects/blob/main/src/main/java/kr/co/vrec/withcube/videoActivity.java>
 
 # 3. EditText Focus Down
+
+<https://github.com/201524495/2021_withCUBE_Projects/blob/main/src/main/res/layout/activity_array_calculation_example.xml>
+
 # 4. EditText KeyBoard (Input Type)
 
-     <EditText
-        android:id="@+id/et_answer1"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="250dp"
-        android:background="@drawable/edittext_rounded_corner_rectangle"
-        android:gravity="center"
-        android:hint="\?"
-        android:fontFamily="@font/font"
-        android:inputType="number" // KeyBoard Type
-        android:maxLength="1"
-        android:nextFocusDown="@id/et_answer2" // next Focus
-        app:layout_constraintStart_toEndOf="@+id/tv_question1"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/et_answer2"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="36dp"
-        android:background="@drawable/edittext_rounded_corner_rectangle"
-        android:gravity="center"
-        android:hint="\?"
-        android:fontFamily="@font/font"
-        android:inputType="number" // KeyBoard Type
-        android:maxLength="1"
-        android:nextFocusDown="@id/et_answer3" // next Focus
-        app:layout_constraintStart_toEndOf="@+id/tv_question2"
-        app:layout_constraintTop_toBottomOf="@+id/et_answer1" />
-
-    <EditText
-        android:id="@+id/et_answer3"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="84dp"
-        android:layout_marginTop="36dp"
-        android:background="@drawable/edittext_rounded_corner_rectangle"
-        android:gravity="center"
-        android:hint="\?"
-        android:fontFamily="@font/font"
-        android:imeOptions="actionDone"
-        android:inputType="number" // KeyBoard Type
-        android:maxLength="1"
-        app:layout_constraintStart_toEndOf="@+id/tv_question3"
-        app:layout_constraintTop_toBottomOf="@+id/et_answer2" />
+<https://github.com/201524495/2021_withCUBE_Projects/blob/main/src/main/res/layout/activity_array_calculation_example.xml>
     
 # 5. Text Blink
 
 <https://github.com/201524495/2021_withCUBE_Projects/blob/main/src/main/res/anim/blink.xml>
 
-    private void blinkText() {
-        TextView myText = (TextView) findViewById(R.id.tv_animation );
-
-        Animation anim = new AlphaAnimation(0.0f, 1.0f);
-        anim.setDuration(500); //You can manage the time of the blink with this parameter
-        anim.setStartOffset(200);
-        anim.setRepeatMode(Animation.REVERSE);
-        anim.setRepeatCount(Animation.INFINITE);
-        myText.startAnimation(anim);
-    }
-
 # 6. Sound option
 
 <https://github.com/201524495/2021_withCUBE_Projects/blob/main/src/main/java/kr/co/vrec/withcube/soundActivity.java>
 
-    public static MediaPlayer mediaPlayer;
-    mediaPlayer = MediaPlayer.create(mainMenu.this, R.raw.b_06); // 음악 샘플 추가
-    mediaPlayer.start(); // 일단 시작
-    public void BackgroundSound(boolean bgmONOFF) {
-        if(!bgmONOFF) { // 켜져 있으면 끈다.
-            mediaPlayer.pause(); // 중지 == bgmONOFF == true
-            Log.e("bgm","bgm off " + bgmONOFF);
-        }
-        else { // 꺼져있으면 켠다.
-            mediaPlayer.setLooping(true);
-            mediaPlayer.start(); // 시작 == bgmONOFF == flase
-            Log.e("bgm","bgm on" + bgmONOFF);
-        }
-    }
-    //
-    public void ClickSound(boolean clickONOFF) {
-        AudioManager amanager=(AudioManager)this.getContext().getSystemService(Context.AUDIO_SERVICE);
-        if(!clickONOFF) {
-            amanager.setStreamMute(AudioManager.STREAM_SYSTEM, true);
-            Log.e("click","click off " + clickONOFF);
-        }
-        else {
-            amanager.setStreamMute(AudioManager.STREAM_SYSTEM, false);
-            Log.e("click","click on " + clickONOFF);
-        }
-    }
 # 7. Splash Activity
 
-splash.java <https://github.com/201524495/2021_withCUBE_Projects/blob/main/src/main/java/kr/co/vrec/withcube/splashActivity.java>
+<https://github.com/201524495/2021_withCUBE_Projects/blob/main/src/main/java/kr/co/vrec/withcube/splashActivity.java>
 
-    try{
-             Thread.sleep(2000);
-         }catch (InterruptedException e) {
-             e.printStackTrace();
-         }
-         Intent intent = new Intent(this, mainMenu.class);
-         startActivity(intent);
-         finish();
      
 AndroidManifest.xml
-     
-    <activity
-        android:name="kr.co.vrec.withcube.splashActivity"
-        android:screenOrientation="portrait"
-        android:theme="@style/SplashTheme">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-    </activity>
+<https://github.com/201524495/2021_withCUBE_Projects/blob/main/src/main/AndroidManifest.xml>
 
 # 8. 
 
