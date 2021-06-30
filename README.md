@@ -211,8 +211,27 @@ Custom Dialog
         }
     }
 # 7. Splash Activity
+    __splash.java__
+    try{
+             Thread.sleep(2000);
+         }catch (InterruptedException e) {
+             e.printStackTrace();
+         }
+         Intent intent = new Intent(this, mainMenu.class);
+         startActivity(intent);
+         finish();
+     
+     __AndroidManifest.xml__
+    <activity
+        android:name="kr.co.vrec.withcube.splashActivity"
+        android:screenOrientation="portrait"
+        android:theme="@style/SplashTheme">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
 
-    dfd
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
 
 # 8. 
 
