@@ -35,8 +35,6 @@ Custom Dialog
 
 <https://github.com/201524495/2021_withCUBE_Projects/blob/main/src/main/java/kr/co/vrec/withcube/splashActivity.java>
 
-     
-AndroidManifest.xml
 <https://github.com/201524495/2021_withCUBE_Projects/blob/main/src/main/AndroidManifest.xml>
 
 # 8. 
