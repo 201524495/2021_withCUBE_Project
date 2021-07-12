@@ -24,7 +24,7 @@ public class arrayCalculationExam extends AppCompatActivity {
     boolean an1=false, an2=false, an3=false;
     
     public static final int calculationBlock[] = {R.drawable.cal_bea1, R.drawable.cal_nakta1, R.drawable.cal_sung1, R.drawable.cal_diamond1, R.drawable.cal_dog1, R.drawable.cal_ori1,
-            R.drawable.cal_moolgogi1, R.drawable.cal_flower1, R.drawable.cal_jib1, R.drawable.cal_g1, R.drawable.cal_leebon1, R.drawable.cal_dart, R.drawable.cal_direction1}; // 연산할 사진
+            R.drawable.cal_moolgogi1, R.drawable.cal_flower1, R.drawable.cal_jib1, R.drawable.cal_g1, R.drawable.cal_leebon1}; // 연산할 사진
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +35,7 @@ public class arrayCalculationExam extends AppCompatActivity {
 
         // 랜덤 값 0 ~ 12
         Random random = new Random();
-        int index = random.nextInt(13); // 0 이상 , 13 미만
+        int index = random.nextInt(11); // 0 이상 , 11 미만
         int res = calculationBlock[index];
 
         im_block = findViewById(R.id.im_cal_block);

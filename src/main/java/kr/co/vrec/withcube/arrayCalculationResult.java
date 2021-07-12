@@ -15,10 +15,10 @@ public class arrayCalculationResult extends AppCompatActivity {
     ImageView  im_result_block, tv_result_real;
 
     public static final int calculationBlock[] = {R.drawable.block_boat, R.drawable.block_camel, R.drawable.block_castle, R.drawable.block_diamond, R.drawable.block_dog, R.drawable.block_duck,
-            R.drawable.block_fish, R.drawable.block_flower, R.drawable.block_house, R.drawable.block_mouse, R.drawable.block_ribbon, R.drawable.block_dart, R.drawable.block_direction}; // 연산할 사진
+            R.drawable.block_fish, R.drawable.block_flower, R.drawable.block_house, R.drawable.block_mouse, R.drawable.block_ribbon}; // 연산할 사진
 
     public static final int blockPicture[] = {R.drawable.res_boat, R.drawable.res_camel, R.drawable.res_castle, R.drawable.res_dia, R.drawable.res_dog, R.drawable.res_duck,
-            R.drawable.res_fish, R.drawable.res_flower, R.drawable.res_home, R.drawable.res_mouse, R.drawable.res_ribbon, R.drawable.res_dart, R.drawable.res_direction};
+            R.drawable.res_fish, R.drawable.res_flower, R.drawable.res_home, R.drawable.res_mouse, R.drawable.res_ribbon};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
